@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile - GigCampus</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .cover { height: 120px; background: #6d28d9; border-top-left-radius: 12px; border-top-right-radius: 12px; }
+  .profile-header { display: flex; gap: 1.5rem; padding: 0 1.5rem 1.5rem; align-items: flex-end; margin-top: -40px; }
+  .avatar { width: 100px; height: 100px; background: #16a34a; color: white; display: flex; justify-content: center; align-items: center; font-size: 3rem; font-weight: bold; border-radius: 16px; border: 4px solid white; box-sizing: border-box; }
+</style>
+</head>
+<body class="shell">
+  <header>
+    <a href="index.html" class="logo">GigCampus</a>
+    <nav style="display: flex; align-items: center;">
+      <a href="index.html">Marketplace</a>
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="messages.html">Messages</a>
+      <a href="post-gig.html">Post Gig</a>
+      <a href="login.html" class="btn" style="text-decoration: none; margin-left: 1.5rem;">Log In</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="card" style="padding: 0;">
+      <div class="cover"></div>
+      <div class="profile-header">
+        <div class="avatar">AM</div>
+        <div style="flex-grow: 1;">
+          <h1 style="margin: 0 0 0.2rem 0;">Aarav Menon</h1>
+          <p style="color: #555; margin: 0;">B.Tech Computer Science · IIT Bombay</p>
+        </div>
+        <span class="badge" style="background: #dcfce7; color: #166534; font-size: 0.9rem; padding: 0.4rem 0.8rem;">Available</span>
+      </div>
+      <div style="padding: 0 1.5rem 1.5rem;">
+        <p style="line-height: 1.6; color: #444; max-width: 700px;">Full-stack developer who loves building fast, responsive user interfaces. Actively looking for frontend and Node.js campus gigs to build my portfolio.</p>
+        <div style="margin-top: 1.5rem; gap: 0.5rem; display: flex; flex-wrap: wrap;">
+          <span class="badge">React</span><span class="badge">JavaScript</span><span class="badge">Node.js</span><span class="badge">Figma</span>
+        </div>
+        
+        <div style="margin-top: 2rem; border-top: 1px solid #eaeaea; padding-top: 1.5rem; display: flex; gap: 3rem; text-align: center;">
+          <div><b style="font-size:1.5rem;display:block">4.8</b><span style="font-size:0.8rem;color:#555">Rating</span></div>
+          <div><b style="font-size:1.5rem;display:block">3</b><span style="font-size:0.8rem;color:#555">Completed gigs</span></div>
+          <div><b style="font-size:1.5rem;display:block">₹12,400</b><span style="font-size:0.8rem;color:#555">Earnings</span></div>
+        </div>
+      </div>
+    </div>
+
+    <h2 style="margin-top: 2rem;">Portfolio</h2>
+    <div class="grid-2">
+      <article class="card">
+        <span class="badge" style="margin-left:0; margin-bottom: 0.5rem;">React · Tailwind</span>
+        <h3 style="margin: 0 0 0.5rem 0;">Campus events hub</h3>
+        <p style="color: #555; margin: 0 0 1rem 0; font-size: 0.9rem; line-height: 1.5;">A responsive event discovery platform used by 400+ students.</p>
+        <a href="#" style="color: #6d28d9; font-weight: bold; text-decoration: none; font-size: 0.9rem;">View project</a>
+      </article>
+    </div>
+  </main>
+</body>
+</html>

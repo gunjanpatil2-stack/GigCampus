@@ -1,0 +1,31 @@
+body { font-family: system-ui, sans-serif; margin: 0; color: #111; background: #fff; }
+.shell { max-width: 900px; margin: 0 auto; padding: 2rem; }
+.shell-sm { max-width: 700px; margin: 0 auto; padding: 2rem; }
+.auth-body { height: 100vh; display: flex; align-items: center; justify-content: center; background: #f9fafb; }
+.auth-card { background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); width: 100%; max-width: 400px; box-sizing: border-box; }
+
+header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eaeaea; padding-bottom: 1rem; margin-bottom: 2rem; }
+.logo { font-size: 1.5rem; font-weight: 800; color: #6d28d9; text-decoration: none; }
+nav a { margin-left: 1.5rem; color: #555; text-decoration: none; font-weight: 500; }
+nav a.active { color: #6d28d9; font-weight: bold; }
+
+.btn { padding: 0.7rem 1rem; background: #6d28d9; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; text-decoration: none; display: inline-block; box-sizing: border-box; text-align: center; }
+.btn-outline { background: white; color: #6d28d9; border: 1px solid #6d28d9; }
+.btn-block { width: 100%; }
+.btn:hover { background: #5b21b6; }
+
+.card { border: 1px solid #eaeaea; padding: 1.5rem; border-radius: 12px; margin-bottom: 1rem; background: white; transition: box-shadow 0.2s; }
+.card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+
+.badge { background: #ede9fe; color: #6d28d9; padding: 0.2rem 0.6rem; border-radius: 999px; font-size: 0.75rem; font-weight: bold; vertical-align: middle; display: inline-block; }
+
+.field { margin-bottom: 1.5rem; }
+label { display: block; font-weight: bold; margin-bottom: 0.5rem; font-size: 0.9rem; }
+input, select, textarea { width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem; box-sizing: border-box; font-family: inherit; }
+textarea { min-height: 100px; resize: vertical; }
+
+.flex-between { display: flex; justify-content: space-between; align-items: center; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+dialog { border: none; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); padding: 2rem; max-width: 400px; width: 100%; }
+dialog::backdrop { background: rgba(0,0,0,0.5); }

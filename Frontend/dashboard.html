@@ -4,28 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dashboard - GigCampus</title>
-<style>
-  body { font-family: system-ui, sans-serif; margin: 0 auto; padding: 2rem; max-width: 900px; color: #111; }
-  header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eaeaea; padding-bottom: 1rem; margin-bottom: 2rem; }
-  .logo { font-size: 1.5rem; font-weight: 800; color: #6d28d9; text-decoration: none; }
-  nav a { margin-left: 1.5rem; color: #555; text-decoration: none; font-weight: 500; }
-  nav a.active { color: #6d28d9; font-weight: bold; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
-  .stat { border: 1px solid #eaeaea; padding: 1.5rem; border-radius: 8px; text-align: center; }
-  .stat b { display: block; font-size: 2.2rem; color: #6d28d9; margin-bottom: 0.5rem; }
-  .stat p { margin: 0; color: #555; font-size: 0.9rem; }
-  .card { border: 1px solid #eaeaea; padding: 1.5rem; border-radius: 12px; margin-bottom: 1rem; }
-  .badge { background: #ede9fe; color: #6d28d9; padding: 0.3rem 0.6rem; border-radius: 999px; font-size: 0.75rem; font-weight: bold; display: inline-block; }
-  .profile-header { display: flex; gap: 1.5rem; align-items: center; margin-bottom: 1rem; }
-  .avatar { width: 80px; height: 80px; background: #16a34a; color: white; display: flex; justify-content: center; align-items: center; font-size: 2.5rem; font-weight: bold; border-radius: 12px; }
-  .btn { padding: 0.5rem 1rem; background: #6d28d9; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; width: 100%; box-sizing: border-box; }
-  .btn-outline { background: white; color: #6d28d9; border: 1px solid #6d28d9; }
-  @media (min-width: 768px) {
-    .layout { display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; }
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="shell">
   <header>
     <a href="index.html" class="logo">GigCampus</a>
     <nav style="display: flex; align-items: center;">
