@@ -20,12 +20,20 @@
   .badge { background: #ede9fe; color: #6d28d9; padding: 0.2rem 0.6rem; border-radius: 999px; font-size: 0.75rem; font-weight: bold; vertical-align: middle; margin-left: 0.5rem; }
   .search { padding: 0.75rem; width: 100%; max-width: 350px; border: 1px solid #ccc; border-radius: 6px; margin-bottom: 1.5rem; font-size: 1rem; }
   .flex-between { display: flex; justify-content: space-between; align-items: center; }
+  nav a { margin-left: 1.5rem; color: #555; text-decoration: none; font-weight: 500; }
+  nav a.active { color: #6d28d9; font-weight: bold; }
 </style>
 </head>
 <body>
   <header>
-    <a href="#" class="logo">GigCampus</a>
-    <button class="btn" onclick="document.getElementById('search').focus()">Explore Gigs</button>
+    <a href="index.html" class="logo">GigCampus</a>
+    <nav style="display: flex; align-items: center;">
+      <a href="index.html" class="active">Marketplace</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="messages.html">Messages</a>
+      <a href="post-gig.html">Post Gig</a>
+      <a href="login.html" class="btn" style="text-decoration: none; margin-left: 1.5rem;">Log In</a>
+    </nav>
   </header>
 
   <main>
