@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GigCampus</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 0 auto; padding: 2rem; max-width: 900px; color: #111; }
+  header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eaeaea; padding-bottom: 1rem; margin-bottom: 2rem; }
+  .logo { font-size: 1.5rem; font-weight: 800; color: #6d28d9; text-decoration: none; }
+  .btn { padding: 0.5rem 1rem; background: #6d28d9; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
+  .btn:hover { background: #5b21b6; }
+  #landing { text-align: center; margin: 4rem 0; }
+  #landing h1 { font-size: 3.5rem; margin-bottom: 1rem; letter-spacing: -0.05em; }
+  #landing p { font-size: 1.2rem; color: #555; max-width: 600px; margin: 0 auto 2rem; }
+  .card { border: 1px solid #eaeaea; padding: 1.5rem; border-radius: 12px; margin-bottom: 1rem; transition: box-shadow 0.2s; }
+  .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+  .card h3 { margin: 0 0 0.5rem 0; }
+  .card p { color: #555; margin: 0 0 1rem 0; }
+  .badge { background: #ede9fe; color: #6d28d9; padding: 0.2rem 0.6rem; border-radius: 999px; font-size: 0.75rem; font-weight: bold; vertical-align: middle; margin-left: 0.5rem; }
+  .search { padding: 0.75rem; width: 100%; max-width: 350px; border: 1px solid #ccc; border-radius: 6px; margin-bottom: 1.5rem; font-size: 1rem; }
+  .flex-between { display: flex; justify-content: space-between; align-items: center; }
+</style>
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">GigCampus</a>
+    <button class="btn" onclick="document.getElementById('search').focus()">Explore Gigs</button>
+  </header>
+
+  <main>
+    <section id="landing">
+      <h1>Learn. Work. Earn.</h1>
+      <p>Find flexible, real-world gigs from campus clubs, startups, and local businesses. Grow your skills and get paid for work you are proud of.</p>
+    </section>
+
+    <section id="marketplace">
+      <h2>Marketplace</h2>
+      <input type="search" id="search" class="search" placeholder="Search gigs by title...">
+      <div id="gigs-container"></div>
+    </section>
+  </main>
+
+  <script>
+    const gigs = [
+      { id: 1, title: 'Build a portfolio website', desc: 'Need a fast React site for Pixel Club.', budget: 8000, cat: 'Web Dev' },
+      { id: 2, title: 'Campus events poster', desc: 'Design a creative poster for the annual tech fest.', budget: 1500, cat: 'Design' },
+      { id: 3, title: 'Social media management', desc: 'Manage Instagram page for the E-Cell for 1 month.', budget: 5000, cat: 'Marketing' },
+      { id: 4, title: 'Debug Python Script', desc: 'Fix bugs in our data scraping script.', budget: 2500, cat: 'Data' }
+    ];
+    
+    const container = document.getElementById('gigs-container');
+    
+    const render = (query = '') => {
+      container.innerHTML = gigs
+        .filter(g => g.title.toLowerCase().includes(query.toLowerCase()))
+        .map(g => `
+          <article class="card">
+            <h3>${g.title} <span class="badge">${g.cat}</span></h3>
+            <p>${g.desc}</p>
+            <div class="flex-between">
+              <b>₹${g.budget.toLocaleString('en-IN')}</b>
+              <button class="btn" onclick="alert('Applied to ${g.title}')">Apply now</button>
+            </div>
+          </article>
+        `).join('');
+    };
+
+    document.getElementById('search').addEventListener('input', e => render(e.target.value));
+    render();
+  </script>
+</body>
+</html>
